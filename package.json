@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "typescript": "^2.5.3"
+  },
+  "name": "ui-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gigobyte/ui-stack.git",
+  "author": "gigobyte <gigobest2@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  }
+}
