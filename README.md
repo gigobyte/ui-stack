@@ -1,0 +1,6 @@
+<h1 align="center">
+  <img src="https://i.imgur.com/rr3Otln.png" alt="ui stack logo" title="ui stack logo">
+  <br>
+</h1>
+<p align="center" style="font-size: 1.2rem;">A chrome extension to inspect a website's framework and libraries</p>
+
