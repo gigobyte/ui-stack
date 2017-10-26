@@ -4,10 +4,11 @@ import { Library } from './checks/types'
 const body = document.getElementsByTagName('body')[0]
 
 const libs = [
-    checks.angularjs(),
-    checks.jquery(),
+    checks.angular(),
     checks.react(),
-    checks.angular()
+    checks.angularjs(),
+    checks.vue(),
+    checks.jquery()
 ].filter(Boolean) as Library[]
 
 console.log(JSON.stringify(libs))

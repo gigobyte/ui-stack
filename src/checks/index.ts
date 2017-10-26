@@ -2,11 +2,13 @@ import { Check } from './types'
 
 const safeGet = (object: Object, path: string[]): any => {
     return path.reduce((value, getter) => {
-        if (!value) {
-            return value
-        }
-
-        return value[getter]
+        try {
+            if (!value) {
+                return value
+            }
+    
+            return value[getter]
+        } catch {}
     }, object)
 }
 
@@ -66,6 +68,31 @@ export const angular: Check = () => {
             slug: 'angular',
             website: 'https://angular.io/',
             version: angularVersionEl && angularVersionEl.getAttribute('ng-version') || undefined
+        }
+    }
+
+    return null
+}
+
+export const vue: Check = () => {
+    const isVueFound = () => {
+        const all = [].slice.call(document.querySelectorAll('*'))
+
+        for (const el of all) {
+            const attributes = [].slice.call(el.attributes).map(attr => attr.nodeName)
+            if (attributes.find(x => x.startsWith('data-v'))) {
+                return true
+            }
+        }
+
+        return false
+    }    
+
+    if (window['Vue'] || isVueFound()) {
+        return {
+            title: 'Vue.js',
+            slug: 'vue',
+            website: 'https://vuejs.org/'
         }
     }
 
