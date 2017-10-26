@@ -1,11 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "lib": ["es2017", "dom"],
-        "declaration": true,
-        "outDir": "./build",
-        "rootDir": "./src",
+        "target": "es6",
         "removeComments": true,
         "strictNullChecks": true,
         "noImplicitThis": true,
@@ -14,11 +9,14 @@
         "noImplicitReturns": true,
         "alwaysStrict": true,
         "noFallthroughCasesInSwitch": true,
-        "baseUrl": "./src/",
+        "baseUrl": "./src",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "types": [
             "chrome"
         ]
-    }
+    },
+    "exclude": [
+        "node_modules"
+    ]
 }

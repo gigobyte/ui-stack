@@ -1,9 +1,67 @@
 <!DOCTYPE html>
 <head>
     <script type="text/javascript" src="../build/popup.js"></script>
+
+    <style>
+        .container {
+            width: 300px;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-item-1 {
+            flex: 1;
+        }
+
+        .flex-item-4 {
+            flex: 4;
+        }
+
+        .logo {
+            padding-right: 15px;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .info {
+            padding-top: 5px;
+        }
+
+        .website {
+            text-decoration: none;
+            color: #404f6b;
+        }
+
+        .website:hover {
+            color: #020406;
+        }
+
+        .version {
+            padding-top: 1px;
+        }
+
+        .lib {
+            padding: 7px 0;
+        }
+
+        .lib:not(:last-child) {
+            border-bottom: 1px solid #f1eeee;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    Hello world
-    <div id="test">Let's do it</button>
+    <div class="container">
+        <div class="message">Loading...</div>
+    </div>
 </body>
 </html>
