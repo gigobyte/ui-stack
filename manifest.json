@@ -4,29 +4,19 @@
     "description": "A chrome extension to inspect a website's framework and libraries ",
     "version": "1.0",
     "author": "Stanislav Iliev",
-    "background": {
-        "scripts": ["build/background.js"],
-        "persistent": false
-     },
     "permissions": [
         "activeTab",
         "storage",
         "tabs"
-     ],
-     "icons": {
-        "16": "images/icon16.png",
-        "32": "images/icon32.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-     },
-     "browser_action": {
-        "default_icon": "/images/icon128.png",
-        "default_popup": "src/index.html"
-     },
-     "content_scripts": [
+    ],
+    "browser_action": {
+        "default_icon": "/images/icon.png",
+        "default_popup": "./src/popup.html"
+    },
+    "content_scripts": [
         {
           "matches": ["<all_urls>"],
-          "js": ["build/main.js"]
+          "js": ["./build/content.js"]
         }
-     ]
+    ]
 }

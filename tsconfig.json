@@ -16,6 +16,9 @@
         "noFallthroughCasesInSwitch": true,
         "baseUrl": "./src/",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "types": [
+            "chrome"
+        ]
     }
 }

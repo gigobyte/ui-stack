@@ -9,6 +9,9 @@
   "author": "gigobyte <gigobest2@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc -w"
+  },
+  "dependencies": {
+    "@types/chrome": "^0.0.50"
   }
 }
