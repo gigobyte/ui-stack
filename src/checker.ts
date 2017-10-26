@@ -8,7 +8,8 @@ const libs = [
     checks.react(),
     checks.angularjs(),
     checks.vue(),
-    checks.jquery()
+    checks.jquery(),
+    checks.moment()
 ].filter(Boolean) as Library[]
 
 console.log(JSON.stringify(libs))

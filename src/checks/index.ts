@@ -98,3 +98,18 @@ export const vue: Check = () => {
 
     return null
 }
+
+export const moment: Check = () => {
+    const version = safeGet(window, ['moment', 'version'])
+
+    if (version) {
+        return {
+            title: 'Moment.js',
+            slug: 'moment',
+            website: 'https://momentjs.com/',
+            version
+        }
+    }
+
+    return null
+}
