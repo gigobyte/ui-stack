@@ -30,7 +30,7 @@ export const jquery: Check = () => {
 
 export const react: Check = () => {
     const REACT_SELECTOR = '[data-reactroot],[data-reactid]'
-    const importedReact = safeRequire(window, 'React') || safeRequire(window, 'react')
+    const importedReact = window['React'] || safeRequire(window, 'React') || safeRequire(window, 'react')
 
     if (document.querySelector(REACT_SELECTOR) || importedReact) { 
         return {
@@ -121,6 +121,39 @@ export const ember: Check = () => {
             slug: 'ember',
             website: 'https://www.emberjs.com/',
             version
+        }
+    }
+}
+
+export const knockback: Check = () => {
+    const version = safeGet(window, 'kb', 'VERSION')
+
+    if (document.querySelectorAll('[kb-inject]').length > 0 || version) {
+        return {
+            title: 'Knockback.js',
+            slug: 'knockback',
+            website: 'http://kmalakoff.github.io/knockback/',
+            version
+        }
+    }
+}
+
+export const require: Check = () => {
+    if (window['require'] && typeof window['require'] === 'function') {
+        return {
+            title: 'RequireJS',
+            slug: 'requirejs',
+            website: 'http://requirejs.org/'
+        }
+    }
+}
+
+export const webpack: Check = () => {
+    if (window['webpackJsonp']) {
+        return {
+            title: 'Webpack',
+            slug: 'webpack',
+            website: 'https://webpack.js.org/'
         }
     }
 }

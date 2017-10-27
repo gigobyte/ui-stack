@@ -15,10 +15,15 @@ const runCheck = () => {
         checks.backbone(),
         checks.knockout(),
         checks.ember(),
+        checks.knockback(),
     
         // libraries
         checks.jquery(),
-        checks.moment()
+        checks.moment(),
+
+        // tools
+        checks.require(),
+        checks.webpack()
     ].filter(Boolean) as Library[]
     
     if (libs.length === 0) {
