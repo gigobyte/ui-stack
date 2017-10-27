@@ -11,7 +11,7 @@ injectScript(chrome.extension.getURL('./build/checker.js'), 'body')
 chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
     if (request.type === 'GET_STACK') {
         const libInterval = setInterval(() => {
-            const libs = [].slice.call(document.querySelectorAll('.ui-stack-lib'))
+            const libs = [...document.querySelectorAll('.ui-stack-lib')] as HTMLElement[]
             const noLibsFound = Boolean(document.querySelector('.ui-stack-no-libs'))
 
             if (noLibsFound) {

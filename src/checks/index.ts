@@ -1,5 +1,6 @@
 import { Check } from './types'
 import safeGet from './safeGet'
+import safeRequire from './safeRequire'
 
 export const angularjs: Check = () => {
     const ANGULARJS_SELECTOR = '[ng-app],[ng-model],[ng-controller],.ng-binding,[ng-scope],.ng-hide'
@@ -29,7 +30,7 @@ export const jquery: Check = () => {
 
 export const react: Check = () => {
     const REACT_SELECTOR = '[data-reactroot],[data-reactid]'
-    const importedReact = window['require'] && window['require']('React')
+    const importedReact = safeRequire(window, 'React') || safeRequire(window, 'react')
 
     if (document.querySelector(REACT_SELECTOR) || importedReact) { 
         return {
@@ -109,6 +110,19 @@ export const knockout: Check = () => {
             slug: 'knockout',
             website: 'http://knockoutjs.com/',
             version: safeGet(window, 'ko', 'version')
+        }
+    }
+}
+
+export const ember: Check = () => {
+    const version = safeGet(window, 'Ember', 'VERSION')
+
+    if (version || document.querySelector('.ember-application')) {
+        return {
+            title: 'Ember.js',
+            slug: 'ember',
+            website: 'https://www.emberjs.com/',
+            version
         }
     }
 }
