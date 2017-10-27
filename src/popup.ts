@@ -4,6 +4,12 @@ const sendRequest = () => {
     chrome.tabs.query({currentWindow: true, active: true}, (tabs) => {
         if (tabs[0] && tabs[0].id) {
             chrome.tabs.sendMessage(tabs[0].id as number, {type: 'GET_STACK'}, renderStack);
+
+            const $message = document.querySelector('.message')
+            
+            if ($message) {
+                $message.textContent = 'Loading...'
+            }
         }
     })
 }
@@ -18,8 +24,14 @@ const renderStack = (libs: Library[]): void => {
 
     if (libs.length === 0) {
         $container.innerHTML = `
-            <div class="message">Nothing found</div>
+            <div class="message">Nothing found. <span class="try-again">Try again</span></div>
         `
+
+        const $tryAgain = document.querySelector('.try-again')
+
+        if ($tryAgain) {
+            $tryAgain.addEventListener('click', sendRequest)
+        }
     } else {
         $container.innerHTML = libs.reduce((html, library) => `
             ${html}
