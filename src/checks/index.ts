@@ -57,22 +57,18 @@ export const angular: Check = () => {
 }
 
 export const vue: Check = () => {
-    const isVueFound = () => {
-        const all = [...document.querySelectorAll('*')]
+    const isVueFound = [...document.querySelectorAll('*')].some(el => {
+        const attributes = Array.from(el.attributes).map(attr => attr.nodeName)
+        const vueAttr = attributes.find(x => x.startsWith('data-v-'))
 
-        for (const el of all) {
-            const attributes = Array.from(el.attributes).map(attr => attr.nodeName)
-            const vueAttr = attributes.find(x => x.startsWith('data-v-'))
-
-            if (el['__vue__'] || (vueAttr && !el.getAttribute(vueAttr))) {
-                return true
-            }
+        if (el['__vue__'] || (vueAttr && !el.getAttribute(vueAttr))) {
+            return true
         }
 
         return false
-    }    
+    })
 
-    if (window['Vue'] || isVueFound()) {
+    if (window['Vue'] || isVueFound) {
         return {
             title: 'Vue.js',
             slug: 'vue',
