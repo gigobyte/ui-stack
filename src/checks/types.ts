@@ -5,4 +5,4 @@ export interface Library {
     readonly website?: string
 }
 
-export type Check = () => Library | null
+export type Check = () => Library | undefined

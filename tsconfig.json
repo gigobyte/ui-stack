@@ -6,7 +6,6 @@
         "noImplicitThis": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noImplicitReturns": true,
         "alwaysStrict": true,
         "noFallthroughCasesInSwitch": true,
         "baseUrl": "./src",

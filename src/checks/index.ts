@@ -1,16 +1,5 @@
 import { Check } from './types'
-
-const safeGet = (object: Object, ...path: string[]): any => {
-    return path.reduce((value, getter) => {
-        try {
-            if (!value) {
-                return value
-            }
-    
-            return value[getter]
-        } catch {}
-    }, object)
-}
+import safeGet from './safeGet'
 
 export const angularjs: Check = () => {
     const ANGULARJS_SELECTOR = '[ng-app],[ng-model],[ng-controller],.ng-binding,[ng-scope],.ng-hide'
@@ -23,8 +12,6 @@ export const angularjs: Check = () => {
             version: safeGet(window, 'angular', 'version', 'full')
         }
     }
-
-    return null
 }
 
 export const jquery: Check = () => {
@@ -38,8 +25,6 @@ export const jquery: Check = () => {
             version: safeGet(window, jqKey, 'fn', 'jquery')
         }
     }
-
-    return null
 }
 
 export const react: Check = () => {
@@ -54,8 +39,6 @@ export const react: Check = () => {
             version: importedReact && importedReact.version
         }
     }
-
-    return null
 }
 
 export const angular: Check = () => {
@@ -70,8 +53,6 @@ export const angular: Check = () => {
             version: angularVersionEl && angularVersionEl.getAttribute('ng-version') || undefined
         }
     }
-
-    return null
 }
 
 export const vue: Check = () => {
@@ -97,8 +78,6 @@ export const vue: Check = () => {
             website: 'https://vuejs.org/'
         }
     }
-
-    return null
 }
 
 export const moment: Check = () => {
@@ -112,8 +91,6 @@ export const moment: Check = () => {
             version
         }
     }
-
-    return null
 }
 
 export const backbone: Check = () => {
@@ -125,8 +102,6 @@ export const backbone: Check = () => {
             version: safeGet(window, 'Backbone', 'VERSION')
         }
     }
-
-    return null
 }
 
 export const knockout: Check = () => {
@@ -138,6 +113,4 @@ export const knockout: Check = () => {
             version: safeGet(window, 'ko', 'version')
         }
     }
-
-    return null
 }
