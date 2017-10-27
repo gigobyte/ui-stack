@@ -16,10 +16,16 @@ const runCheck = () => {
         checks.knockout(),
         checks.ember(),
         checks.knockback(),
+        checks.polymer(),
+        checks.mithril(),
+        checks.aurelia(),
+        checks.dojo(),
     
         // libraries
         checks.jquery(),
         checks.moment(),
+        checks.socketio(),
+        checks.cyclejs(),
 
         // tools
         checks.require(),

@@ -1,6 +1,7 @@
 import { Check } from './types'
 import safeGet from './safeGet'
 import safeRequire from './safeRequire'
+import isObjectWithProperties from './isObjectWithProperties'
 
 export const angularjs: Check = () => {
     const ANGULARJS_SELECTOR = '[ng-app],[ng-model],[ng-controller],.ng-binding,[ng-scope],.ng-hide'
@@ -23,7 +24,7 @@ export const jquery: Check = () => {
             title: 'jQuery',
             slug: 'jquery',
             website: 'https://jquery.com/',
-            version: safeGet(window, jqKey, 'fn', 'jquery')
+            version: safeGet(window, jqKey, 'fn', 'jquery').split(' ')[0]
         }
     }
 }
@@ -57,7 +58,7 @@ export const angular: Check = () => {
 }
 
 export const vue: Check = () => {
-    const isVueFound = [...document.querySelectorAll('*')].some(el => {
+    const isVueFound = ([...(document.querySelectorAll('*') as any)] as HTMLElement[]).some(el => {
         const attributes = Array.from(el.attributes).map(attr => attr.nodeName)
         const vueAttr = attributes.find(x => x.startsWith('data-v-'))
 
@@ -154,6 +155,76 @@ export const webpack: Check = () => {
             title: 'Webpack',
             slug: 'webpack',
             website: 'https://webpack.js.org/'
+        }
+    }
+}
+
+export const polymer: Check = () => {
+    if(safeGet(window, 'Polymer', 'version')) {
+        return {
+            title: 'Polymer',
+            slug: 'polymer',
+            website: 'https://www.polymer-project.org/',
+            version: safeGet(window, 'Polymer', 'version')
+        }
+    }
+}
+
+export const mithril: Check = () => {
+    const isMithrilObject = x => isObjectWithProperties(window[x], ['component', 'render', 'route', 'prop'])
+    const mKey = Object.getOwnPropertyNames(window).find(isMithrilObject)
+
+    if (mKey) {
+        return {
+            title: 'Mithril',
+            slug: 'mithril',
+            website: 'https://mithril.js.org/'
+        }
+    }
+}
+
+export const aurelia: Check = () => {
+    if (document.querySelector('[aurelia-app]')) {
+        return {
+            title: 'Aurelia',
+            slug: 'aurelia',
+            website: 'http://aurelia.io/'
+        }
+    }
+}
+
+export const dojo: Check = () => {
+    const version = safeGet(window, 'dojo', 'version', 'toString')
+
+    if (version) {
+        return {
+            title: 'Dojo',
+            slug: 'dojo',
+            website: 'https://dojotoolkit.org/',
+            version: version()
+        }
+    }
+}
+
+export const socketio: Check = () => {
+    const isSocketIoObject = x => isObjectWithProperties(window[x], ['Manager', 'Socket', 'connect', 'managers'])
+    const ioKey = Object.getOwnPropertyNames(window).find(isSocketIoObject)
+
+    if (ioKey) {
+        return {
+            title: 'socket.io',
+            slug: 'socketio',
+            website: 'https://socket.io/'
+        }
+    }
+}
+
+export const cyclejs: Check = () => {
+    if (safeGet(window, 'Cyclejs', 'sinks')) {
+        return {
+            title: 'Cycle.js',
+            slug: 'cyclejs',
+            website: 'https://cycle.js.org/'
         }
     }
 }
