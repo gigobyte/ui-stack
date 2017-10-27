@@ -57,10 +57,10 @@ export const angular: Check = () => {
 
 export const vue: Check = () => {
     const isVueFound = () => {
-        const all = [].slice.call(document.querySelectorAll('*'))
+        const all = [...document.querySelectorAll('*')]
 
         for (const el of all) {
-            const attributes = [].slice.call(el.attributes).map(attr => attr.nodeName)
+            const attributes = Array.from(el.attributes).map(attr => attr.nodeName)
             const vueAttr = attributes.find(x => x.startsWith('data-v-'))
 
             if (vueAttr && !el.getAttribute(vueAttr)) {
@@ -81,14 +81,12 @@ export const vue: Check = () => {
 }
 
 export const moment: Check = () => {
-    const version = safeGet(window, 'moment', 'version')
-
-    if (version) {
+    if (safeGet(window, 'moment', 'version')) {
         return {
             title: 'Moment.js',
             slug: 'moment',
             website: 'https://momentjs.com/',
-            version
+            version: safeGet(window, 'moment', 'version')
         }
     }
 }
