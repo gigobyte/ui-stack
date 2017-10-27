@@ -4,10 +4,15 @@ import { Library } from './checks/types'
 const body = document.getElementsByTagName('body')[0]
 
 const libs = [
+    // frameworks
     checks.angular(),
     checks.react(),
-    checks.angularjs(),
     checks.vue(),
+    checks.angularjs(),
+    checks.backbone(),
+    checks.knockout(),
+
+    // libraries
     checks.jquery(),
     checks.moment()
 ].filter(Boolean) as Library[]

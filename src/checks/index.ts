@@ -1,6 +1,6 @@
 import { Check } from './types'
 
-const safeGet = (object: Object, path: string[]): any => {
+const safeGet = (object: Object, ...path: string[]): any => {
     return path.reduce((value, getter) => {
         try {
             if (!value) {
@@ -20,7 +20,7 @@ export const angularjs: Check = () => {
             title: 'AngularJS',
             slug: 'angularjs',
             website: 'https://angularjs.org/',
-            version: safeGet(window, ['angular', 'version', 'full'])
+            version: safeGet(window, 'angular', 'version', 'full')
         }
     }
 
@@ -28,14 +28,14 @@ export const angularjs: Check = () => {
 }
 
 export const jquery: Check = () => {
-    const jqKey = Object.getOwnPropertyNames(window).find(x => safeGet(window, [x, 'fn', 'jquery']))
+    const jqKey = Object.getOwnPropertyNames(window).find(x => safeGet(window, x, 'fn', 'jquery'))
 
     if (jqKey) {
         return {
             title: 'jQuery',
             slug: 'jquery',
             website: 'https://jquery.com/',
-            version: safeGet(window, [jqKey, 'fn', 'jquery'])
+            version: safeGet(window, jqKey, 'fn', 'jquery')
         }
     }
 
@@ -80,7 +80,9 @@ export const vue: Check = () => {
 
         for (const el of all) {
             const attributes = [].slice.call(el.attributes).map(attr => attr.nodeName)
-            if (attributes.find(x => x.startsWith('data-v'))) {
+            const vueAttr = attributes.find(x => x.startsWith('data-v-'))
+
+            if (vueAttr && !el.getAttribute(vueAttr)) {
                 return true
             }
         }
@@ -100,7 +102,7 @@ export const vue: Check = () => {
 }
 
 export const moment: Check = () => {
-    const version = safeGet(window, ['moment', 'version'])
+    const version = safeGet(window, 'moment', 'version')
 
     if (version) {
         return {
@@ -108,6 +110,32 @@ export const moment: Check = () => {
             slug: 'moment',
             website: 'https://momentjs.com/',
             version
+        }
+    }
+
+    return null
+}
+
+export const backbone: Check = () => {
+    if (safeGet(window, 'Backbone', 'VERSION')) {
+        return {
+            title: 'Backbone.js',
+            slug: 'backbone',
+            website: 'http://backbonejs.org/',
+            version: safeGet(window, 'Backbone', 'VERSION')
+        }
+    }
+
+    return null
+}
+
+export const knockout: Check = () => {
+    if (safeGet(window, 'ko', 'version')) {
+        return {
+            title: 'Knockout',
+            slug: 'knockout',
+            website: 'http://knockoutjs.com/',
+            version: safeGet(window, 'ko', 'version')
         }
     }
 
