@@ -6,24 +6,32 @@ const injectScript = (file: string, node: string) => {
     th.appendChild(s)
 }
 
+let cachedResult
+
 chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
     if (request.type === 'GET_STACK') {
-        injectScript(chrome.extension.getURL('./build/checker.js'), 'body')
-
-        const libInterval = setInterval(() => {
-            const libs = [...document.querySelectorAll('.ui-stack-lib') as any] as HTMLElement[]
-            const noLibsFound = Boolean(document.querySelector('.ui-stack-no-libs'))
-
-            if (noLibsFound) {
-                sendResponse([])
-                clearInterval(libInterval)
-            }
-
-            if (libs.length !== 0) {
-                sendResponse(libs.map(x => ({...x.dataset})))
-                clearInterval(libInterval)
-            }
-        }, 1000)
+        if (!cachedResult) {
+            injectScript(chrome.extension.getURL('./build/checker.js'), 'body')
+    
+            const libInterval = setInterval(() => {
+                const libs = ([...document.querySelectorAll('.ui-stack-lib') as any] as HTMLElement[]).map(x => ({...x.dataset}))
+                const noLibsFound = Boolean(document.querySelector('.ui-stack-no-libs'))
+    
+                if (noLibsFound) {
+                    cachedResult = []
+                    sendResponse([])
+                    clearInterval(libInterval)
+                }
+    
+                if (libs.length !== 0) {
+                    cachedResult = libs
+                    sendResponse(libs)
+                    clearInterval(libInterval)
+                }
+            }, 1000)
+        } else {
+            sendResponse(cachedResult)
+        }
     }
 
     return true;

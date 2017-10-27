@@ -1,6 +1,19 @@
 import { Library } from './checks/types';
 
+const sendRequest = () => {
+    chrome.tabs.query({currentWindow: true, active: true}, (tabs) => {
+        if (tabs[0] && tabs[0].id) {
+            chrome.tabs.sendMessage(tabs[0].id as number, {type: 'GET_STACK'}, renderStack);
+        }
+    })
+}
+
 const renderStack = (libs: Library[]): void => {
+    if (!libs) {
+        sendRequest()
+        return
+    }
+
     const $container = document.querySelector('.container') as HTMLElement
 
     if (libs.length === 0) {
@@ -24,11 +37,6 @@ const renderStack = (libs: Library[]): void => {
             </div>
         `, '')
     }
-
 }
 
-chrome.tabs.query({currentWindow: true, active: true}, (tabs) => {
-    if (tabs[0] && tabs[0].id) {
-        chrome.tabs.sendMessage(tabs[0].id as number, {type: 'GET_STACK'}, renderStack);
-    }
-})
+sendRequest()
