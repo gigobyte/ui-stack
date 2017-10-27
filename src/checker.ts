@@ -20,6 +20,7 @@ const runCheck = () => {
         checks.mithril(),
         checks.aurelia(),
         checks.dojo(),
+        checks.meteor(),
     
         // libraries
         checks.jquery(),
@@ -50,15 +51,14 @@ const runCheck = () => {
             libEl.className = 'ui-stack-lib'
             body.appendChild(libEl)
         })
-    }    
+    }
 }
 
 runCheck()
 
 setInterval(() => {
     if (appendedLibs) {
-        const libElementAdded = Boolean(document.querySelector('.ui-stack-lib')) ||
-                                Boolean(document.querySelector('.ui-stack-no-libs'))
+        const libElementAdded = Boolean(document.querySelector('.ui-stack-lib, .ui-stack-no-libs'))
 
         if (!libElementAdded) {
             appendedLibs = false

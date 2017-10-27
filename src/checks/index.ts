@@ -144,7 +144,8 @@ export const require: Check = () => {
         return {
             title: 'RequireJS',
             slug: 'requirejs',
-            website: 'http://requirejs.org/'
+            website: 'http://requirejs.org/',
+            version: safeGet(window, 'require', 'version')
         }
     }
 }
@@ -225,6 +226,19 @@ export const cyclejs: Check = () => {
             title: 'Cycle.js',
             slug: 'cyclejs',
             website: 'https://cycle.js.org/'
+        }
+    }
+}
+
+export const meteor: Check = () => {
+    const version = safeGet(window, 'Meteor', 'release')
+
+    if (version) {
+        return {
+            title: 'Meteor',
+            slug: 'meteor',
+            website: 'https://www.meteor.com/',
+            version: version.split('@').pop()
         }
     }
 }
