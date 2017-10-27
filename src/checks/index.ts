@@ -64,7 +64,7 @@ export const vue: Check = () => {
             const attributes = Array.from(el.attributes).map(attr => attr.nodeName)
             const vueAttr = attributes.find(x => x.startsWith('data-v-'))
 
-            if (vueAttr && !el.getAttribute(vueAttr)) {
+            if (el['__vue__'] || (vueAttr && !el.getAttribute(vueAttr))) {
                 return true
             }
         }
@@ -93,12 +93,14 @@ export const moment: Check = () => {
 }
 
 export const backbone: Check = () => {
-    if (safeGet(window, 'Backbone', 'VERSION')) {
+    const backbone = safeGet(window, 'Backbone') || safeRequire(window, 'backbone')
+
+    if (safeGet(backbone, 'VERSION')) {
         return {
             title: 'Backbone.js',
             slug: 'backbone',
             website: 'http://backbonejs.org/',
-            version: safeGet(window, 'Backbone', 'VERSION')
+            version: safeGet(backbone, 'VERSION')
         }
     }
 }
