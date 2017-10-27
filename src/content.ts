@@ -6,10 +6,10 @@ const injectScript = (file: string, node: string) => {
     th.appendChild(s)
 }
 
-injectScript(chrome.extension.getURL('./build/checker.js'), 'body')
-
 chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
     if (request.type === 'GET_STACK') {
+        injectScript(chrome.extension.getURL('./build/checker.js'), 'body')
+
         const libInterval = setInterval(() => {
             const libs = [...document.querySelectorAll('.ui-stack-lib') as any] as HTMLElement[]
             const noLibsFound = Boolean(document.querySelector('.ui-stack-no-libs'))

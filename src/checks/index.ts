@@ -140,7 +140,7 @@ export const knockback: Check = () => {
 }
 
 export const require: Check = () => {
-    if (window['require'] && typeof window['require'] === 'function') {
+    if (typeof window['require'] === 'function' && typeof window['requirejs'] === 'function') {
         return {
             title: 'RequireJS',
             slug: 'requirejs',
