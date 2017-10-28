@@ -28,6 +28,10 @@ const runCheck = () => {
         checks.moment(),
         checks.socketio(),
         checks.cyclejs(),
+        checks.styledComponents(),
+        checks.emotion(),
+        checks.glamorous(),
+        checks.radium(),
 
         // tools
         checks.require(),

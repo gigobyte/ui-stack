@@ -253,3 +253,43 @@ export const kendoui: Check = () => {
         }
     }
 }
+
+export const styledComponents: Check = () => {
+    if (document.querySelector('style[data-styled-components]')) {
+        return {
+            title: 'styled-components',
+            slug: 'styledcomponents',
+            website: 'https://www.styled-components.com/'
+        }
+    }
+}
+
+export const emotion: Check = () => {
+    if (document.querySelector('style[data-emotion]')) {
+        return {
+            title: 'emotion',
+            slug: 'emotion',
+            website: 'https://emotion.sh/'
+        }
+    }
+}
+
+export const glamorous: Check = () => {
+    if (document.querySelector('style[data-glamor]')) {
+        return {
+            title: 'glamorous',
+            slug: 'glamorous',
+            website: 'https://glamorous.rocks/'
+        }
+    }
+}
+
+export const radium: Check = () => {
+    if (document.querySelector('[data-radium]')) {
+        return {
+            title: 'Radium',
+            slug: 'radium',
+            website: 'http://formidable.com/open-source/radium/'
+        }
+    }
+}
