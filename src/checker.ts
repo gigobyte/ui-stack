@@ -21,6 +21,7 @@ const runCheck = () => {
         checks.aurelia(),
         checks.dojo(),
         checks.meteor(),
+        checks.kendoui(),
     
         // libraries
         checks.jquery(),

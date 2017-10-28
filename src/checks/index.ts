@@ -242,3 +242,14 @@ export const meteor: Check = () => {
         }
     }
 }
+
+export const kendoui: Check = () => {
+    if (safeGet(window, 'kendo', 'version')) {
+        return {
+            title: 'KendoUI',
+            slug: 'kendoui',
+            website: 'https://www.telerik.com/kendo-ui',
+            version: safeGet(window, 'kendo', 'version')
+        }
+    }
+}
