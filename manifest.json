@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "UI Stack",
-    "description": "A chrome extension to inspect a website's framework and libraries ",
+    "description": "A Chrome extension that lets you see a website's framework and libraries",
     "version": "1.0",
     "author": "Stanislav Iliev",
     "permissions": [
@@ -19,5 +19,10 @@
           "js": ["build/content.js"]
         }
     ],
-    "web_accessible_resources": ["build/checker.js"]
+    "web_accessible_resources": ["build/checker.js"],
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
 }
