@@ -4,3 +4,7 @@
 </h1>
 <p align="center" style="font-size: 1.2rem;">A chrome extension to inspect a website's framework and libraries</p>
 
+<h1 align="center">
+  <img src="https://i.imgur.com/W96YR3t.png" alt="example screenshot" title="example screenshot">
+  <br>
+</h1>
