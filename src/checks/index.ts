@@ -103,12 +103,14 @@ export const backbone: Check = () => {
 }
 
 export const knockout: Check = () => {
-    if (safeGet(window, 'ko', 'version')) {
+    const knockout = safeGet(window, 'ko') || safeRequire(window, 'knockout')
+
+    if (safeGet(knockout, 'version')) {
         return {
             title: 'Knockout',
             slug: 'knockout',
             website: 'http://knockoutjs.com/',
-            version: safeGet(window, 'ko', 'version')
+            version: safeGet(knockout, 'version')
         }
     }
 }
@@ -290,6 +292,57 @@ export const radium: Check = () => {
             title: 'Radium',
             slug: 'radium',
             website: 'http://formidable.com/open-source/radium/'
+        }
+    }
+}
+
+export const nextjs: Check = () => {
+    if (safeGet(window, 'next', 'ErrorComponent') || safeGet(window, '__NEXT_DATA__')) {
+        return {
+            title: 'Next.js',
+            slug: 'nextjs',
+            website: 'https://zeit.co/next'
+        }
+    }
+}
+
+export const elm: Check = () => {
+    if (typeof window['Elm'] === 'object') {
+        return {
+            title: 'Elm',
+            slug: 'elm',
+            website: 'http://elm-lang.org/'
+        }
+    }
+}
+
+export const scalajs: Check = () => {
+    if (window['__ScalaJSExportsNamespace']) {
+        return {
+            title: 'Scala.js',
+            slug: 'scalajs',
+            website: 'https://www.scala-js.org/'
+        }
+    }
+}
+
+export const reason: Check = () => {
+    if (safeGet(window, 'ocaml', 'version')) {
+        return {
+            title: 'Reason',
+            slug: 'reason',
+            website: 'https://reasonml.github.io/',
+            version: safeGet(window, 'ocaml', 'version')
+        }
+    }
+}
+
+export const gatsby: Check = () => {
+    if (document.querySelector('#___gatsby')) {
+        return {
+            title: 'Gatsby',
+            slug: 'gatsby',
+            website: 'https://www.gatsbyjs.org/'
         }
     }
 }

@@ -7,6 +7,11 @@ const runCheck = () => {
     const body = document.getElementsByTagName('body')[0]
     
     const libs = [
+        // languages
+        checks.elm(),
+        checks.scalajs(),
+        checks.reason(),
+
         // frameworks
         checks.angular(),
         checks.react(),
@@ -22,6 +27,8 @@ const runCheck = () => {
         checks.dojo(),
         checks.meteor(),
         checks.kendoui(),
+        checks.nextjs(),
+        checks.gatsby(),
     
         // libraries
         checks.jquery(),
