@@ -32,6 +32,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/aurelia.png" alt="aurelia" title="Aurelia">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/backbone.png" alt="backbone" title="Backbone.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/cyclejs.png" alt="cyclejs" title="Cycle.js">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/d3.png" alt="d3" title="D3.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/dojo.png" alt="dojo" title="Dojo">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/elm.png" alt="elm" title="Elm">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/ember.png" alt="ember" title="Ember.js">
@@ -42,11 +43,15 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/kendoui.png" alt="kendoui" title="KendoUI">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/knockback.png" alt="knockback" title="Knockback.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/knockout.png" alt="knockout" title="Knockout">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/materialize.png" alt="materialize" title="Materialize">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/meteor.png" alt="meteor" title="Meteor">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/mithril.png" alt="mithril" title="Mithril">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/mobx.png" alt="mobx" title="MobX">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/modernizr.png" alt="modernizr" title="Modernizr">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/moment.png" alt="moment" title="Moment.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/nextjs.png" alt="nextjs" title="Next.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/polymer.png" alt="polymer" title="Polymer">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/purescript.png" alt="purescript" title="PureScript">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/radium.png" alt="radium" title="Radium">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/react.png" alt="react" title="React">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/reason.png" alt="reason" title="Reason">
@@ -56,5 +61,6 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/styledcomponents.png" alt="styledcomponents" title="styled-components">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/vue.png" alt="vue" title="Vue">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/webpack.png" alt="webpack" title="Webpack">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/whsjs.png" alt="whsjs" title="whs.js">
   <br />
 </h1>
