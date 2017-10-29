@@ -11,7 +11,8 @@
   "author": "gigobyte <gigobest2@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -w"
+    "build": "webpack -w",
+    "build-release": "webpack --config webpack.config.production.js"
   },
   "dependencies": {
     "@types/chrome": "^0.0.50"
