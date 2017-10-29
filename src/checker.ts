@@ -11,6 +11,7 @@ const runCheck = () => {
         checks.elm(),
         checks.scalajs(),
         checks.reason(),
+        checks.purescript(),
 
         // frameworks
         checks.angular(),
@@ -41,6 +42,9 @@ const runCheck = () => {
         checks.radium(),
         checks.modernizr(),
         checks.mobx(),
+        checks.materialize(),
+        checks.d3(),
+        checks.whitestormjs(),
 
         // tools
         checks.require(),

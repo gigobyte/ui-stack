@@ -371,3 +371,44 @@ export const mobx: Check = () => {
         }
     }
 }
+
+export const materialize: Check = () => {
+    if (typeof window['Materialize'] === 'object') {
+        return {
+            title: 'Materialize',
+            slug: 'materialize',
+            website: 'http://materializecss.com/'
+        }
+    }
+}
+
+export const d3: Check = () => {
+    if (safeGet(window, 'd3', 'version')) {
+        return {
+            title: 'D3.js',
+            slug: 'd3',
+            website: 'https://d3js.org/',
+            version: safeGet(window, 'd3', 'version')
+        }
+    }
+}
+
+export const whitestormjs: Check = () => {
+    if (typeof window['WHS'] === 'object') {
+        return {
+            title: 'whs.js',
+            slug: 'whsjs',
+            website: 'https://whs.io/'
+        }
+    }
+}
+
+export const purescript: Check = () => {
+    if (safeGet(window, 'PS', 'Main')) {
+        return {
+            title: 'PureScript',
+            slug: 'purescript',
+            website: 'http://www.purescript.org/'
+        }
+    }
+}
