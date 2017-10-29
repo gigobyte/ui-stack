@@ -42,13 +42,19 @@ const renderStack = (libs: Library[]): void => {
                 <div class="flex-item-4 info">
                     <div class="title">${library.title}</div>
                     ${library.website &&
-                        `<a href="${library.website}" class="website">${library.website}</a>`
+                        `<a href="${library.website}" data-href="${library.website}" class="website">${library.website}</a>`
                     }
                     <div class="version">${library.version || ''}</div>
                 </div>
             </div>
         `, '')
     }
+
+    [...document.querySelectorAll('.website') as any].forEach(el => {
+        el.addEventListener('click', (e) => {
+            chrome.tabs.create({url: e.target.dataset.href});
+        })
+    });
 }
 
 sendRequest()
