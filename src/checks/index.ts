@@ -346,3 +346,28 @@ export const gatsby: Check = () => {
         }
     }
 }
+
+export const modernizr: Check = () => {
+    if (safeGet(window, 'Modernizr', '_version')) {
+        return {
+            title: 'Modernizr',
+            slug: 'modernizr',
+            website: 'https://modernizr.com/',
+            version: safeGet(window, 'Modernizr', '_version')
+        }
+    }
+}
+
+export const mobx: Check = () => {
+    const isStore = x => safeGet(x, '$mobx')
+    const isRootStore = x => window[x] && Object.values(window[x]).some(isStore)
+    const mobxKey = Object.getOwnPropertyNames(window).find(isRootStore)
+
+    if (mobxKey || safeRequire(window, 'mobx') || window['__mobxInstanceCount'] || window['__mobxGlobal']) {
+        return {
+            title: 'MobX',
+            slug: 'mobx',
+            website: 'https://mobx.js.org/'
+        }
+    }
+}

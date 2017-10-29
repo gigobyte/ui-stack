@@ -39,6 +39,8 @@ const runCheck = () => {
         checks.emotion(),
         checks.glamorous(),
         checks.radium(),
+        checks.modernizr(),
+        checks.mobx(),
 
         // tools
         checks.require(),
