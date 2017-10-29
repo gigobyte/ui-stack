@@ -12,6 +12,7 @@ const runCheck = () => {
         checks.scalajs(),
         checks.reason(),
         checks.purescript(),
+        checks.clojurescript(),
 
         // frameworks
         checks.angular(),
@@ -30,6 +31,12 @@ const runCheck = () => {
         checks.kendoui(),
         checks.nextjs(),
         checks.gatsby(),
+        checks.ui5(),
+        checks.marko(),
+        checks.svelte(),
+        checks.marionette(),
+        checks.inferno(),
+        checks.dio(),
     
         // libraries
         checks.jquery(),
@@ -45,6 +52,9 @@ const runCheck = () => {
         checks.materialize(),
         checks.d3(),
         checks.whitestormjs(),
+        checks.mootools(),
+        checks.p5(),
+        checks.pixijs(),
 
         // tools
         checks.require(),

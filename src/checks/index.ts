@@ -1,6 +1,7 @@
 import { Check } from './types'
 import safeGet from './safeGet'
 import safeRequire from './safeRequire'
+import safeGetValues from './safeGetValues'
 import isObjectWithProperties from './isObjectWithProperties'
 
 export const angularjs: Check = () => {
@@ -360,7 +361,7 @@ export const modernizr: Check = () => {
 
 export const mobx: Check = () => {
     const isStore = x => safeGet(x, '$mobx')
-    const isRootStore = x => window[x] && Object.values(window[x]).some(isStore)
+    const isRootStore = x => window[x] && safeGetValues(window[x]) && safeGetValues(window[x]).some(isStore)
     const mobxKey = Object.getOwnPropertyNames(window).find(isRootStore)
 
     if (mobxKey || safeRequire(window, 'mobx') || window['__mobxInstanceCount'] || window['__mobxGlobal']) {
@@ -409,6 +410,113 @@ export const purescript: Check = () => {
             title: 'PureScript',
             slug: 'purescript',
             website: 'http://www.purescript.org/'
+        }
+    }
+}
+
+export const mootools: Check = () => {
+    if (safeGet(window, 'MooTools', 'version')) {
+        return {
+            title: 'MooTools',
+            slug: 'mootools',
+            website: 'https://mootools.net/',
+            version: safeGet(window, 'MooTools', 'version')
+        }
+    }
+}
+
+export const clojurescript: Check = () => {
+    if (safeGet(window, 'cljs', 'core')) {
+        return {
+            title: 'ClojureScript',
+            slug: 'clojurescript',
+            website: 'https://clojurescript.org/'
+        }
+    }
+}
+
+export const p5: Check = () => {
+    if (typeof window['p5'] === 'function') {
+        return {
+            title: 'p5.js',
+            slug: 'p5',
+            website: 'https://p5js.org/'
+        }
+    }
+}
+
+export const pixijs: Check = () => {
+    if (safeGet(window, 'PIXI', 'VERSION')) {
+        return {
+            title: 'PixiJS',
+            slug: 'pixijs',
+            website: 'http://www.pixijs.com/',
+            version: safeGet(window, 'PIXI', 'VERSION')
+        }
+    }
+}
+
+export const ui5: Check = () => {
+    if (safeGet(window, 'sap', 'ui', 'version')) {
+        return {
+            title: 'UI5',
+            slug: 'ui5',
+            website: 'http://openui5.org/',
+            version: safeGet(window, 'sap', 'ui', 'version')
+        }
+    }
+}
+
+export const marko: Check = () => {
+    if (document.querySelector('[data-marko],[data-marko-key]')) {
+        return {
+            title: 'Marko',
+            slug: 'marko',
+            website: 'https://markojs.com/'
+        }
+    }
+}
+
+export const svelte: Check = () => {
+    if (safeGet(window, 'svelte', 'VERSION')) {
+        return {
+            title: 'Svelte',
+            slug: 'svelte',
+            website: 'https://svelte.technology/',
+            version: safeGet(window, 'svelte', 'VERSION')
+        }
+    }
+}
+
+export const marionette: Check = () => {
+    if (safeGet(window, 'Marionette', 'VERSION')) {
+        return {
+            title: 'Marionette',
+            slug: 'marionette',
+            website: 'https://marionettejs.com/',
+            version: safeGet(window, 'Marionette', 'VERSION')
+        }
+    }
+}
+
+export const inferno: Check = () => {
+    if (safeGet(window, 'Inferno', 'version')) {
+        return {
+            title: 'Inferno',
+            slug: 'inferno',
+            website: 'https://infernojs.org/',
+            version: safeGet(window, 'Inferno', 'version')
+        }
+    }
+}
+
+export const dio: Check = () => {
+    if (safeGet(window, 'dio', 'version')) {
+        return {
+            title: 'DIO',
+            slug: 'dio',
+            website: 'https://dio.js.org/',
+            version: safeGet(window, 'dio', 'version')
         }
     }
 }
