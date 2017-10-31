@@ -1,11 +1,12 @@
 import { Check } from './types'
 import safeGet from './safeGet'
+import safeCall from './safeCall'
 import safeRequire from './safeRequire'
 import safeGetValues from './safeGetValues'
 import isObjectWithProperties from './isObjectWithProperties'
 
 export const angularjs: Check = () => {
-    const ANGULARJS_SELECTOR = '[ng-app],[ng-model],[ng-controller],.ng-binding,[ng-scope],.ng-hide'
+    const ANGULARJS_SELECTOR = '[ng-app],[ng-model],[ng-controller],[ng-scope],.ng-hide'
 
     if (document.querySelector(ANGULARJS_SELECTOR)) {
         return {
@@ -39,13 +40,13 @@ export const react: Check = () => {
             title: 'React',
             slug: 'react',
             website: 'https://reactjs.org/',
-            version: importedReact && importedReact.version
+            version: safeGet(importedReact, 'version')
         }
     }
 }
 
 export const angular: Check = () => {
-    const ANGULAR_SELECTOR = '[_nghost-c0],[_ngcontent-c0],[ng-version]'
+    const ANGULAR_SELECTOR = '[_nghost-c0],[_ngcontent-c0],[ng-version],[ng-for]'
     const angularVersionEl = document.querySelector('[ng-version]')
 
     if (document.querySelector(ANGULAR_SELECTOR)) {
@@ -517,6 +518,115 @@ export const dio: Check = () => {
             slug: 'dio',
             website: 'https://dio.js.org/',
             version: safeGet(window, 'dio', 'version')
+        }
+    }
+}
+
+export const extjs: Check = () => {
+    if (safeGet(window, 'Ext', 'version')) {
+        return {
+            title: 'Ext JS',
+            slug: 'extjs',
+            website: 'https://www.sencha.com/products/extjs/',
+            version: safeGet(window, 'Ext', 'version')
+        }
+    }
+}
+
+export const yui: Check = () => {
+    if (safeGet(window, 'YUI', 'version')) {
+        return {
+            title: 'YUI',
+            slug: 'yui',
+            website: 'https://yuilibrary.com/',
+            version: safeGet(window, 'YUI', 'version')
+        }
+    }
+}
+
+export const enyo: Check = () => {
+    const enyo = safeGet(window, 'enyo')
+    const enyoRequire = safeGet(enyo, 'require')
+
+    if (enyo || safeGet(window, 'EnyoJS')) {
+        return {
+            title: 'Enyo',
+            slug: 'enyo',
+            website: 'http://enyojs.com/',
+            version: safeGet(enyo, 'version') || safeGet(enyo, 'version', 'enyo') || safeGet(safeCall(enyoRequire, 'enyo'), 'version')
+        }
+    }
+}
+
+export const immutable: Check = () => {
+    const im = safeGet(window, 'Immutable') || safeRequire(window, 'immutable')
+
+    if (im) {
+        return {
+            title: 'Immutable.js',
+            slug: 'immutable',
+            website: 'https://facebook.github.io/immutable-js/',
+            version: safeGet(im, 'version')
+        }
+    }
+}
+
+export const jqueryui: Check = () => {
+    const jqKey = Object.getOwnPropertyNames(window).find(x => safeGet(window, x, 'ui', 'version'))
+
+    if (jqKey) {
+        return {
+            title: 'jQuery UI',
+            slug: 'jqueryui',
+            website: 'https://jqueryui.com/',
+            version: safeGet(window, jqKey, 'ui', 'version')
+        }
+    }
+}
+
+export const moon: Check = () => {
+    const m = safeGet(window, 'Moon') || safeRequire(window, 'moonjs')
+    if (m) {
+        return {
+            title: 'Moon',
+            slug: 'moon',
+            website: 'http://moonjs.ga/',
+            version: safeGet(m, 'version')
+        }
+    }
+}
+
+export const riot: Check = () => {
+    const r = safeGet(window, 'riot') || safeRequire(window, 'riot')
+
+    if (r) {
+        return {
+            title: 'Riot',
+            slug: 'riot',
+            website: 'http://riotjs.com/',
+            version: safeGet(r, 'version')
+        }
+    }
+}
+
+export const phaser: Check = () => {
+    if (safeGet(window, 'Phaser', 'VERSION')) {
+        return {
+            title: 'Phaser',
+            slug: 'phaser',
+            website: 'https://phaser.io/',
+            version: safeGet(window, 'Phaser', 'VERSION')
+        }
+    }
+}
+
+export const webix: Check = () => {
+    if (safeGet(window, 'webix', 'version')) {
+        return {
+            title: 'webix',
+            slug: 'webix',
+            website: 'https://webix.com/',
+            version: safeGet(window, 'webix', 'version')
         }
     }
 }

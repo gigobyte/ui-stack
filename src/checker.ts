@@ -37,6 +37,12 @@ const runCheck = () => {
         checks.marionette(),
         checks.inferno(),
         checks.dio(),
+        checks.extjs(),
+        checks.yui(),
+        checks.enyo(),
+        checks.riot(),
+        checks.phaser(),
+        checks.webix(),
     
         // libraries
         checks.jquery(),
@@ -55,6 +61,9 @@ const runCheck = () => {
         checks.mootools(),
         checks.p5(),
         checks.pixijs(),
+        checks.immutable(),
+        checks.jqueryui(),
+        checks.moon(),
 
         // tools
         checks.require(),
