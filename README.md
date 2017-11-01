@@ -13,6 +13,8 @@
 
 [![Install from chrome web store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://chrome.google.com/webstore/detail/ui-stack/ijagbooglignnjecmjnmdfapfbgblkdk)
 
+You can install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/ui-stack/ijagbooglignnjecmjnmdfapfbgblkdk)
+
 You can also install it locally by cloning this repo and following the [official tutorial](https://developer.chrome.com/extensions/getstarted#unpacked)
 
 # Contribution
