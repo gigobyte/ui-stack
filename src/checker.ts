@@ -65,6 +65,9 @@ const runCheck = () => {
         checks.immutable(),
         checks.jqueryui(),
         checks.moon(),
+        checks.chartjs(),
+        checks.raphael(),
+        checks.amcharts(),
 
         // tools
         checks.require(),

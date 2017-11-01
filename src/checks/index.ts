@@ -643,3 +643,34 @@ export const preact: Check = () => {
         }
     }
 }
+
+export const chartjs: Check = () => {
+    if (safeGet(window, 'Chart', 'instances')) {
+        return {
+            title: 'Chart.js',
+            slug: 'chartjs',
+            website: 'http://www.chartjs.org/'
+        }
+    }
+}
+
+export const raphael: Check = () => {
+    if (safeGet(window, 'Raphael', 'version')) {
+        return {
+            title: 'Raphaël',
+            slug: 'raphael',
+            website: 'http://www.raphaeljs.com/',
+            version: safeGet(window, 'Raphael', 'version')
+        }
+    }
+}
+
+export const amcharts: Check = () => {
+    if (safeGet(window, 'AmCharts') || safeGet(window, 'amcharts2')) {
+        return {
+            title: 'amCharts',
+            slug: 'amcharts',
+            website: 'https://www.amcharts.com/'
+        }
+    }
+}
