@@ -29,10 +29,12 @@ You can also install it locally by cloning this repo and following the [official
 # Support
 
 <h1 align="center">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/amcharts.png" alt="amcharts" title="amCharts">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/angular.png" alt="angular" title="Angular">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/angularjs.png" alt="angularjs" title="AngularJS">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/aurelia.png" alt="aurelia" title="Aurelia">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/backbone.png" alt="backbone" title="Backbone.js">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/chartjs.png" alt="chartjs" title="Chart.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/clojurescript.png" alt="clojurescript" title="ClojureScript">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/cyclejs.png" alt="cyclejs" title="Cycle.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/d3.png" alt="d3" title="D3.js">
@@ -67,8 +69,10 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/phaser.png" alt="phaser" title="Phaser">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/pixijs.png" alt="pixijs" title="PixiJS">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/polymer.png" alt="polymer" title="Polymer">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/preact.png" alt="preact" title="Preact">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/purescript.png" alt="purescript" title="PureScript">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/radium.png" alt="radium" title="Radium">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/raphael.png" alt="raphael" title="Raphaël">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/react.png" alt="react" title="React">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/reason.png" alt="reason" title="Reason">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/requirejs.png" alt="requirejs" title="RequireJS">
