@@ -43,6 +43,7 @@ const runCheck = () => {
         checks.riot(),
         checks.phaser(),
         checks.webix(),
+        checks.preact(),
     
         // libraries
         checks.jquery(),

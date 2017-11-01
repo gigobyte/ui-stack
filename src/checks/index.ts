@@ -4,6 +4,7 @@ import safeCall from './safeCall'
 import safeRequire from './safeRequire'
 import safeGetValues from './safeGetValues'
 import isObjectWithProperties from './isObjectWithProperties'
+import doesAnyElement from './doesAnyElement'
 
 export const angularjs: Check = () => {
     const ANGULARJS_SELECTOR = '[ng-app],[ng-model],[ng-controller],[ng-scope],.ng-hide'
@@ -34,8 +35,9 @@ export const jquery: Check = () => {
 export const react: Check = () => {
     const REACT_SELECTOR = '[data-reactroot],[data-reactid]'
     const importedReact = window['React'] || safeRequire(window, 'React') || safeRequire(window, 'react')
+    const isReactFound = doesAnyElement(document, el => Object.keys(el).some(key => key.startsWith('__react')))
 
-    if (document.querySelector(REACT_SELECTOR) || importedReact) { 
+    if (document.querySelector(REACT_SELECTOR) || importedReact || isReactFound) { 
         return {
             title: 'React',
             slug: 'react',
@@ -60,7 +62,7 @@ export const angular: Check = () => {
 }
 
 export const vue: Check = () => {
-    const isVueFound = ([...(document.querySelectorAll('*') as any)] as HTMLElement[]).some(el => {
+    const isVueFound = doesAnyElement(document, el => {
         const attributes = Array.from(el.attributes).map(attr => attr.nodeName)
         const vueAttr = attributes.find(x => x.startsWith('data-v-'))
 
@@ -627,6 +629,20 @@ export const webix: Check = () => {
             slug: 'webix',
             website: 'https://webix.com/',
             version: safeGet(window, 'webix', 'version')
+        }
+    }
+}
+
+export const preact: Check = () => {
+    const preact = safeGet(window, 'preact') || safeRequire(window, 'preact')
+    const isPreactFound = doesAnyElement(document, el => el[Symbol.for('preactattr')] || el['__preactattr_'])
+
+    if (preact || isPreactFound) {
+        return {
+            title: 'Preact',
+            slug: 'preact',
+            website: 'https://preactjs.com/',
+            version: safeGet(preact, 'version')
         }
     }
 }
