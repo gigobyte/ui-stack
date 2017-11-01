@@ -1,8 +1,5 @@
 import { Check } from './types'
-import safeGet from './safeGet'
-import safeCall from './safeCall'
-import safeRequire from './safeRequire'
-import safeGetValues from './safeGetValues'
+import { safeGet, safeCall, safeRequire, safeGetValues }  from './errorHiding'
 import isObjectWithProperties from './isObjectWithProperties'
 import doesAnyElement from './doesAnyElement'
 
