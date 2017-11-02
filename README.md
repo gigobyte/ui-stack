@@ -40,6 +40,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/d3.png" alt="d3" title="D3.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/dio.png" alt="dio" title="DIO">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/dojo.png" alt="dojo" title="Dojo">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/echarts.png" alt="echarts" title="ECharts">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/elm.png" alt="elm" title="Elm">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/ember.png" alt="ember" title="Ember.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/emotion.png" alt="emotion" title="emotion">
@@ -87,6 +88,5 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/webpack.png" alt="webpack" title="Webpack">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/whsjs.png" alt="whsjs" title="whs.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/yui.png" alt="yui" title="YUI">
-  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/echarts.png" alt="echarts" title="ECharts">
   <br />
 </h1>
