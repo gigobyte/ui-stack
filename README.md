@@ -87,5 +87,6 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/webpack.png" alt="webpack" title="Webpack">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/whsjs.png" alt="whsjs" title="whs.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/yui.png" alt="yui" title="YUI">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/echarts.png" alt="echarts" title="ECharts">
   <br />
 </h1>
