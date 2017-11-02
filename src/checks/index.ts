@@ -34,7 +34,7 @@ export const react: Check = () => {
     const importedReact = window['React'] || safeRequire(window, 'React') || safeRequire(window, 'react')
     const isReactFound = doesAnyElement(document, el => Object.keys(el).some(key => key.startsWith('__react')))
 
-    if (document.querySelector(REACT_SELECTOR) || importedReact || isReactFound) { 
+    if (document.querySelector(REACT_SELECTOR) || importedReact || isReactFound) {
         return {
             title: 'React',
             slug: 'react',
@@ -673,4 +673,15 @@ export const amcharts: Check = () => {
             website: 'https://www.amcharts.com/'
         }
     }
+}
+
+export const echarts: Check = () => {
+  if (safeGet(window, 'echarts', 'version')) {
+      return {
+          title: 'ECharts',
+          slug: 'echarts',
+          website: 'http://echarts.baidu.com/',
+          version: safeGet(window, 'echarts', 'version')
+      }
+  }
 }

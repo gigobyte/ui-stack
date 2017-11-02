@@ -5,7 +5,7 @@ let appendedLibs = false
 
 const runCheck = () => {
     const body = document.getElementsByTagName('body')[0]
-    
+
     const libs = [
         // languages
         checks.elm(),
@@ -44,7 +44,7 @@ const runCheck = () => {
         checks.phaser(),
         checks.webix(),
         checks.preact(),
-    
+
         // libraries
         checks.jquery(),
         checks.moment(),
@@ -68,12 +68,13 @@ const runCheck = () => {
         checks.chartjs(),
         checks.raphael(),
         checks.amcharts(),
+        checks.echarts(),
 
         // tools
         checks.require(),
         checks.webpack()
     ].filter(Boolean) as Library[]
-    
+
     if (libs.length === 0) {
         appendedLibs = true
 
