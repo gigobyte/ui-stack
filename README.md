@@ -30,6 +30,7 @@ You can also install it locally by cloning this repo and following the [official
 
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/amcharts.png" alt="amcharts" title="amCharts">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/amp.png" alt="amp" title="AMP">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/angular.png" alt="angular" title="Angular">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/angularjs.png" alt="angularjs" title="AngularJS">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/aurelia.png" alt="aurelia" title="Aurelia">
@@ -55,6 +56,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/kendoui.png" alt="kendoui" title="KendoUI">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/knockback.png" alt="knockback" title="Knockback.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/knockout.png" alt="knockout" title="Knockout">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/lodash.png" alt="lodash" title="Lodash">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/marionette.png" alt="marionette" title="Marionette">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/marko.png" alt="marko" title="Marko">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/materialize.png" alt="materialize" title="Materialize">
