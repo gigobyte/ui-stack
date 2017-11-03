@@ -44,6 +44,7 @@ const runCheck = () => {
         checks.phaser(),
         checks.webix(),
         checks.preact(),
+        checks.amp(),
 
         // libraries
         checks.jquery(),
@@ -69,6 +70,7 @@ const runCheck = () => {
         checks.raphael(),
         checks.amcharts(),
         checks.echarts(),
+        checks.lodash(),
 
         // tools
         checks.require(),

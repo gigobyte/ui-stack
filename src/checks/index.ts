@@ -685,3 +685,25 @@ export const echarts: Check = () => {
       }
   }
 }
+
+export const lodash: Check = () => {
+    if (safeGet(window, '_', 'VERSION')) {
+        return {
+            title: 'Lodash',
+            slug: 'lodash',
+            website: 'https://lodash.com/',
+            version: safeGet(window, '_', 'VERSION')
+        }
+    }
+}
+
+export const amp: Check = () => {
+    if (safeGet(window, 'AMP') || safeGet(window, 'AMP_TAG') || safeGet(window, 'AMP_MODE')) {
+        return {
+            title: 'AMP',
+            slug: 'amp',
+            website: 'https://www.ampproject.org/',
+            version: safeGet(window, 'AMP_MODE', 'version')
+        }
+    }
+}
