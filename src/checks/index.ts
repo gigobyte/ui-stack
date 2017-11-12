@@ -707,3 +707,25 @@ export const amp: Check = () => {
         }
     }
 }
+
+export const highcharts: Check = () => {
+    if (safeGet(window, 'Highcharts', 'version')) {
+        return {
+            title: 'Highscharts',
+            slug: 'highcharts',
+            website: 'https://www.highcharts.com/',
+            version: safeGet(window, 'Highcharts', 'version')
+        }
+    }
+}
+
+export const handlebars: Check = () => {
+    if (safeGet(window, 'Handlebars', 'VERSION')) {
+        return {
+            title: 'Handlebars',
+            slug: 'handlebars',
+            website: 'http://handlebarsjs.com/',
+            version: safeGet(window, 'Handlebars', 'VERSION')
+        }
+    }
+}

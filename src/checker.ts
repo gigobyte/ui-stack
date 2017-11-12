@@ -71,6 +71,8 @@ const runCheck = () => {
         checks.amcharts(),
         checks.echarts(),
         checks.lodash(),
+        checks.highcharts(),
+        checks.handlebars(),
 
         // tools
         checks.require(),
