@@ -49,6 +49,8 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/extjs.png" alt="extjs" title="Ext JS">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/gatsby.png" alt="gatsby" title="Gatsby">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/glamorous.png" alt="glamorous" title="glamorous">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/handlebars.png" alt="handlebars" title="Handlebars">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/highcharts.png" alt="highcharts" title="Highcharts">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/immutable.png" alt="immutable" title="Immutable">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/inferno.png" alt="inferno" title="Inferno">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/jquery.png" alt="jquery" title="jQuery">
