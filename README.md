@@ -33,6 +33,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/amp.png" alt="amp" title="AMP">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/angular.png" alt="angular" title="Angular">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/angularjs.png" alt="angularjs" title="AngularJS">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/anime.png" alt="anime" title="anime">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/aurelia.png" alt="aurelia" title="Aurelia">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/backbone.png" alt="backbone" title="Backbone.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/chartjs.png" alt="chartjs" title="Chart.js">
@@ -46,6 +47,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/ember.png" alt="ember" title="Ember.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/emotion.png" alt="emotion" title="emotion">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/enyo.png" alt="enyo" title="Enyo">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/epoch.png" alt="epoch" title="Epoch">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/extjs.png" alt="extjs" title="Ext JS">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/gatsby.png" alt="gatsby" title="Gatsby">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/glamorous.png" alt="glamorous" title="glamorous">
@@ -87,10 +89,12 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/styledcomponents.png" alt="styledcomponents" title="styled-components">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/svelte.png" alt="svelte" title="Svelte">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/ui5.png" alt="ui5" title="UI5">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/uikit.png" alt="uikit" title="UIkit">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/vue.png" alt="vue" title="Vue">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/webix.png" alt="webix" title="webix">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/webpack.png" alt="webpack" title="Webpack">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/whsjs.png" alt="whsjs" title="whs.js">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/yalla.png" alt="yalla" title="YallaJS">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/yui.png" alt="yui" title="YUI">
   <br />
 </h1>
