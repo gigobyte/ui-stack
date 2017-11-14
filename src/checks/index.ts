@@ -729,3 +729,45 @@ export const handlebars: Check = () => {
         }
     }
 }
+
+export const anime: Check = () => {
+    if (safeGet(window, 'anime', 'version')) {
+        return {
+            title: 'anime',
+            slug: 'anime',
+            website: 'http://animejs.com/',
+            version: safeGet(window, 'anime', 'version')
+        }
+    }
+}
+
+export const uikit: Check = () => {
+    if (safeGet(window, 'UIkit', 'version')) {
+        return {
+            title: 'UIkit',
+            slug: 'uikit',
+            website: 'https://getuikit.com/',
+            version: safeGet(window, 'UIkit', 'version')
+        }
+    }
+}
+
+export const yalla: Check = () => {
+    if (safeGet(window, 'yalla')) {
+        return {
+            title: 'YallaJS',
+            slug: 'yalla',
+            website: 'http://yallajs.io/'
+        }
+    }
+}
+
+export const epoch: Check = () => {
+    if (safeGet(window, 'Epoch')) {
+        return {
+            title: 'Epoch',
+            slug: 'epoch',
+            website: 'https://epochjs.github.io/epoch/'
+        }
+    }
+}

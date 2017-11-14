@@ -45,6 +45,7 @@ const runCheck = () => {
         checks.webix(),
         checks.preact(),
         checks.amp(),
+        checks.uikit(),
 
         // libraries
         checks.jquery(),
@@ -73,6 +74,9 @@ const runCheck = () => {
         checks.lodash(),
         checks.highcharts(),
         checks.handlebars(),
+        checks.anime(),
+        checks.yalla(),
+        checks.epoch(),
 
         // tools
         checks.require(),
