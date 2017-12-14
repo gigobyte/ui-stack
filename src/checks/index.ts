@@ -771,3 +771,14 @@ export const epoch: Check = () => {
         }
     }
 }
+
+export const ractive: Check = () => {
+    if (safeGet(window, 'Ractive')) {
+        return {
+            title: 'Ractive',
+            slug: 'ractive',
+            website: 'https://ractive.js.org/',
+            version: safeGet(window, 'Ractive', 'VERSION')
+        }
+    }
+}
