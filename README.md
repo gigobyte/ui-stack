@@ -78,6 +78,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/polymer.png" alt="polymer" title="Polymer">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/preact.png" alt="preact" title="Preact">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/purescript.png" alt="purescript" title="PureScript">
+  <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/ractive.png" alt="ractive" title="Ractive">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/radium.png" alt="radium" title="Radium">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/raphael.png" alt="raphael" title="Raphaël">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/react.png" alt="react" title="React">
