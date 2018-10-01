@@ -782,3 +782,13 @@ export const ractive: Check = () => {
         }
     }
 }
+
+export const semantic: Check = () => {
+    if (safeGet(window, 'semantic')) {
+        return {
+            title: 'Semantic UI',
+            slug: 'semanticui',
+            website: 'https://semantic-ui.com/'
+        }
+    }
+}
