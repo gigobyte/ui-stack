@@ -47,6 +47,7 @@ const runCheck = () => {
         checks.amp(),
         checks.uikit(),
         checks.ractive(),
+        checks.semantic(),
         checks.bootstrap(),
 
         // libraries
@@ -79,7 +80,6 @@ const runCheck = () => {
         checks.anime(),
         checks.yalla(),
         checks.epoch(),
-        checks.semantic(),
 
         // tools
         checks.require(),
