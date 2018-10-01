@@ -792,3 +792,13 @@ export const semantic: Check = () => {
         }
     }
 }
+
+export const bootstrap: Check = () => {
+    if (safeGet(window, 'bootstrap')) {
+        return {
+            title: 'Bootstrap',
+            slug: 'bootstrap',
+            website: 'https://getbootstrap.com/'
+        }
+    }
+}
