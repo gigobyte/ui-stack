@@ -782,3 +782,23 @@ export const ractive: Check = () => {
         }
     }
 }
+
+export const semantic: Check = () => {
+    if (safeGet(window, 'semantic')) {
+        return {
+            title: 'Semantic UI',
+            slug: 'semanticui',
+            website: 'https://semantic-ui.com/'
+        }
+    }
+}
+
+export const bootstrap: Check = () => {
+    if (safeGet(window, 'bootstrap')) {
+        return {
+            title: 'Bootstrap',
+            slug: 'bootstrap',
+            website: 'https://getbootstrap.com/'
+        }
+    }
+}

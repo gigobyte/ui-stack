@@ -36,6 +36,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/anime.png" alt="anime" title="anime">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/aurelia.png" alt="aurelia" title="Aurelia">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/backbone.png" alt="backbone" title="Backbone.js">
+    <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/bootstrap.png" alt="bootstrap" title="Bootstrap">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/chartjs.png" alt="chartjs" title="Chart.js">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/clojurescript.png" alt="clojurescript" title="ClojureScript">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/cyclejs.png" alt="cyclejs" title="Cycle.js">
@@ -86,6 +87,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/requirejs.png" alt="requirejs" title="RequireJS">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/riot.png" alt="riot" title="Riot">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/scalajs.png" alt="scalajs" title="Scala.js">
+    <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/semanticui.png" alt="semanticui" title="Semantic UI">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/socketio.png" alt="socketio" title="socket.io">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/styledcomponents.png" alt="styledcomponents" title="styled-components">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/svelte.png" alt="svelte" title="Svelte">

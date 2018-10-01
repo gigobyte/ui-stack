@@ -47,6 +47,8 @@ const runCheck = () => {
         checks.amp(),
         checks.uikit(),
         checks.ractive(),
+        checks.semantic(),
+        checks.bootstrap(),
 
         // libraries
         checks.jquery(),
