@@ -81,6 +81,7 @@ const runCheck = () => {
         checks.anime(),
         checks.yalla(),
         checks.epoch(),
+        checks.maquette(),
 
         // tools
         checks.require(),

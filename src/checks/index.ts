@@ -813,3 +813,13 @@ export const foundation: Check = () => {
         }
     }
 }
+
+export const maquette: Check = () => {
+    if (safeGet(window, 'maquette')) {
+        return {
+            title: 'Мaquette',
+            slug: 'maquette',
+            website: 'https://maquettejs.org/'
+        }
+    }
+}
