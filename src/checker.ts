@@ -49,6 +49,7 @@ const runCheck = () => {
         checks.ractive(),
         checks.semantic(),
         checks.bootstrap(),
+        cheks.foundation(),
 
         // libraries
         checks.jquery(),

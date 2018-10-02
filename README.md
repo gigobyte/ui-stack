@@ -50,6 +50,7 @@ You can also install it locally by cloning this repo and following the [official
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/enyo.png" alt="enyo" title="Enyo">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/epoch.png" alt="epoch" title="Epoch">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/extjs.png" alt="extjs" title="Ext JS">
+    <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/foundation.png" alt="foundation" title="Foundation">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/gatsby.png" alt="gatsby" title="Gatsby">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/glamorous.png" alt="glamorous" title="glamorous">
   <img src="https://raw.githubusercontent.com/gigobyte/ui-stack/master/images/handlebars.png" alt="handlebars" title="Handlebars">
