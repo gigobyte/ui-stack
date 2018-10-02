@@ -802,3 +802,14 @@ export const bootstrap: Check = () => {
         }
     }
 }
+
+export const foundation: Check = () => {
+    if (safeGet(window, 'Foundation')) {
+        return {
+            title: 'Foundation',
+            slug: 'foundation',
+            website: 'https://foundation.zurb.com/',
+            version: safeGet(window, 'Foundation', 'version')
+        }
+    }
+}
